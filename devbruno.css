@@ -1,0 +1,573 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+    --azul-profundo: #0e004b;
+    --azul-escuro: #180474;
+    --azul: #1c0197;
+    --azul-claro: #522bfd;
+
+    --preto: #000;
+
+    --branco: #fff;
+
+    --laranja: #ff6600;
+    --azul-claro2: #00e1ff;
+    --amarelo: #ffee00;
+    --cinza: #707070;
+    --cinza-opaco: #7070705b;
+}
+
+::-webkit-scrollbar {
+    width: 0.1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    width: auto;
+    height: auto;
+
+    background-color: var(--azul-escuro);
+}
+
+/*efeito de lanter para o cursor (opcional)*/
+.lanterna {
+    position: absolute;
+    width: 50vh;
+    height: 50vh;
+    background-image: radial-gradient(circle, rgba(0, 204, 255, 0.26) 0%, rgba(0, 162, 255, 0) 70%,  rgba(0, 114, 180, 0) 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+
+}
+
+/*header*/
+
+header {
+    background-image: url(./Assets/logo.png);
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: 50%, 50%;
+
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, var(--preto), var(--azul-profundo));
+    z-index: -1;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+
+    padding: 5px;
+
+    position: fixed;
+
+    top: 0;
+
+    z-index: 7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    transition: 0.4s;
+}
+
+nav.second-bg {
+    background-color: var(--azul);
+
+    height: 8vh;
+}
+
+nav, ul {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: space-around;
+
+    list-style: none;
+}
+
+nav ul li {
+    flex: 1;
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: var(--branco);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.5rem;
+}
+
+nav a:hover {
+    color: var(--azul-claro2);
+}
+
+.menu-item.active {
+    color: var(--azul-claro2);
+}
+
+header h2 {
+    width: 100%;
+
+    position: absolute;
+    bottom: 20vh;
+
+    text-align: center;
+    font-weight: 200;
+
+    color: var(--branco);
+}
+
+/*container do site*/
+
+.container-site {
+    width: 100%;
+
+    background-image: linear-gradient(to bottom, var(--preto), var(--azul-escuro));
+
+    text-align: center;
+}
+
+.container-site h1 {
+    font-size: 2rem;
+
+    margin: 2rem 0;
+}
+
+/*sessão sobre*/
+
+.about {
+    width: 100%;
+    height: 100vh;
+
+    color: var(--branco);
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#box-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 4vh;
+}
+
+#box-about p {
+    width: 60%;
+
+    text-indent: 2.5rem;
+
+    text-align: justify;
+}
+
+/*sessão experiência*/
+
+.experience {
+    width: 100%;
+    height: 100vh;
+
+    color: var(--branco);
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.experiene h1 {
+    margin-bottom: 4vh;
+}
+
+#box-xp {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+
+    gap: 15px;
+}
+
+#xp {
+    width: 40vh;
+    height: 50vh;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: var(--azul-claro);
+
+}
+
+.bg-xp {
+    width: 100%;
+    height: 30vh;
+
+    border-radius: 10px;
+
+    margin-bottom: 1rem;
+}
+
+#comercio {
+    background-image: url(./Assets/profissao-1.png);
+    background-size: cover;
+}
+
+#caixa {
+    background-image: url(./Assets/profissao-2.png);
+    background-size: cover;
+}
+
+#designer-grafico {
+    background-image: url(./Assets/profissao-3.png);
+    background-size: cover;
+}
+
+#dev {
+    background-image: url(./Assets/profissao-4.png);
+    background-size: cover;
+}
+
+#description {
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50%;
+
+    z-index: 1;
+}
+
+#description p {
+    width: 80%;
+    text-align: center;
+
+    margin-top: 1rem;
+}
+
+/*sessão educação*/
+
+.education {
+    width: 100%;
+    height: 100vh;
+
+    padding: 15px;
+
+    color: var(--branco);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.education h1 {
+    margin-bottom: 1.5rem;
+}
+
+.education ul {
+    width: 100%;
+
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+}
+
+.education ul i {
+    font-size: 3.5rem;
+
+    margin-bottom: 0.7rem;
+}
+
+.education ul p {
+    font-size: 1.3rem;
+}
+
+.education ul li {
+    text-align: center;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#curso-html:hover i {
+    color: var(--laranja);
+}
+
+#curso-css:hover i {
+    color: var(--azul-claro2);
+}
+
+#curso-js:hover i {
+    color: var(--amarelo);
+}
+
+#curso-gg:hover .fa-git-alt {
+    color: #ff6600;
+}
+
+#curso-gg i {
+    margin-right: 1rem;
+}
+
+/*sessão projetos*/
+
+.projects {
+    width: 100%;
+
+    padding: 15px;
+
+    gap: 4vh;
+
+    color: var(--branco);
+}
+
+.container-projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 4vh;
+}
+
+#box-project {
+    width: 30vh;
+    height: 30vh;
+
+    border-radius: 20px;
+
+    padding: 8px;
+
+    background-color: var(--azul-claro);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 3vh;
+
+    transition: transform 0.3s;
+}
+
+#box-project:hover {
+    transform: scale(1.1) translate( 0, -10px);
+}
+
+#box-project a {
+    text-decoration: none;
+
+    color: var(--branco);
+}
+
+.pic {
+    width: 95%;
+    height: 20vh;
+
+    border-radius: 20px;
+
+    background-color: #00e1ff;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.project-1 {
+    background-image: url(./Assets/projeto-1.png);
+}
+
+.project-2 {
+    background-image: url(./Assets/projeto-2.png);
+}
+
+.project-3 {
+    background-image: url(./Assets/projeto-3.png);
+}
+
+.project-4 {
+    background-image: url(./Assets/projeto-4.png);
+}
+
+.project-4 {
+    background-image: url(./Assets/projeto-4.png);
+}
+
+.project-5 {
+    background-image: url(./Assets/projeto-5.png);
+}
+
+.project-6 {
+    background-image: url(./Assets/projeto-6.png);
+}
+
+.project-7 {
+    background-image: url(./Assets/projeto-7.png);
+}
+
+/*sessão contatos*/
+.contact {
+    width: 100%;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact ul {
+    width: 40%;
+
+    padding: 20px;
+
+    background-color: var(--preto);
+
+    border-radius: 15px;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.contact ul li, p {
+    text-align: left;
+}
+
+.contact ul li {
+    color: var(--azul-claro2);
+}
+
+.contact a {
+    text-decoration: none;
+
+    color: var(--azul-claro2);
+}
+
+/*download*/
+
+.download {
+    width: 100%;
+    height: 10vh;
+}
+
+.download button {
+    font-size: 1rem;
+
+    padding: 4px;
+
+    border-radius: 5px;
+
+    border: none;
+
+    background-color: var(--azul-claro2);
+
+    transition: 0.2s;
+}
+
+.download a {
+    text-decoration: none;
+
+    color: var(--azul-profundo);
+}
+
+.download button:hover {
+    background-color: var(--amarelo);
+}
+
+/*footer*/
+
+footer {
+    width: 100%;
+
+    color: var(--branco);
+
+    margin-bottom: 1rem;
+}
+
+footer p {
+    width: 100%;
+    text-align: center;
+}

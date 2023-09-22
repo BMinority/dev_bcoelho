@@ -1,0 +1,136 @@
+@media (max-width: 780px) {
+    header {
+        height: 80vh;
+
+        background-size: 90%;
+        background-position-y: 50%;
+    }
+
+    header h2 {
+        bottom: 30vh;
+
+        font-weight: 100;
+
+        font-size: 1rem;
+    }
+
+    nav {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+
+        background-color: black;
+    }
+
+    nav a {
+        flex-direction: column;
+
+        gap: 0.2rem;
+    }
+
+    nav a:hover {
+        color: var(--branco);
+    }
+
+    nav i {
+        font-size: 1.1rem;
+    }
+
+    nav p{
+        font-size: 0.6rem;
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-site h1 {
+        font-size: 1.5rem;
+    }
+
+    .experience {
+        width: 100%;
+        height: auto;
+    }
+
+    .about {
+        width: 100%;
+        height: 85vh;
+    }
+
+    #box-about p {
+        width: 100%;
+    }
+
+    #xp {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .bg-xp {
+        height: 100vh;
+    }
+    
+
+    #description {
+        width: 100%;
+    }
+
+    #description h2 {
+        font-size: 1.3rem;
+    }
+
+    #description p {
+        font-size: 1.3rem;
+    }
+
+    .education {
+        gap: 1rem;
+
+        height: 85vh;
+    }
+
+    .education ul i {
+        font-size: 2rem;
+    }
+
+    .education ul p {
+        font-size: 0.8rem;
+    }
+
+    #box-project {
+        width: 100%;
+
+        font-size: 1.5rem;
+    }
+
+    #box-project:hover {
+        transform: none;
+    } 
+
+    #contact {
+        height: 75vh;
+    }
+
+    .contact ul {
+        width: 95%;
+
+        padding: 10px;
+    }
+
+    .contact ul li {
+        font-size: 1.2rem;
+    }
+
+    .download {
+        height: 8vh;
+    }
+
+    footer {
+        height: 10vh;
+
+        font-size: 0.7rem;
+    }
+}
