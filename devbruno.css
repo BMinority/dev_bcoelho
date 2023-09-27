@@ -11,17 +11,29 @@
     --azul-escuro: #180474;
     --azul: #1c0197;
     --azul-claro: #522bfd;
+    --azul-claro2: #00e1ff;
+
+    --roxo: #8700a1;
+
+    --verde: #6c8d38; 
 
     --preto: #000;
-    --preto-opaco: #0000006b;
+    --preto-opaco: #00000042;
 
     --branco: #fff;
 
     --laranja: #ff6600;
-    --laranja-escuro: #752f00;
     --laranja-claro: #ff8432;
-    --azul-claro2: #00e1ff;
+    --laranja-claro-quente: #cf6324;
+
     --amarelo: #ffee00;
+    
+    --marrom: #642800;
+    --marrom-claro: #ad4500;
+    --marrom-claro2: #e47932;
+
+    --creme: #f19b61;    
+
     --cinza: #707070;
     --cinza-escuro: #292828;
     --cinza-opaco: #7070705b;
@@ -104,7 +116,19 @@ nav.bg-dia {
 }
 
 nav.bg-tarde {
-    background-color: var(--laranja-escuro);
+    background-color: var(--azul-escuro);
+
+    height: 9vh;
+}
+
+nav.bg-tarde2 {
+    background-color: var(--roxo);
+
+    height: 9vh;
+}
+
+nav.bg-tarde3 {
+    background-color: var(--marrom-claro);
 
     height: 9vh;
 }
@@ -163,7 +187,11 @@ nav p {
 }
 
 .menu-item.active-tarde {
-    color: var(--laranja-claro);
+    color: var(--azul-claro2);
+}
+
+.menu-item.active-tarde2 {
+    color: var(--creme);
 }
 
 .menu-item.active-noite {

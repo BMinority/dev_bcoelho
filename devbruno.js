@@ -27,7 +27,7 @@ function verificarHoras() {
         });
 
     } else if (hora >= 12 && hora < 19) {
-        corpo.style.backgroundImage = "linear-gradient(to bottom, var(--laranja), var(--preto)20%, var(--laranja))";
+        corpo.style.backgroundImage = "linear-gradient(to bottom, var(--azul-claro), var(--laranja))";
 
         const menuItens = document.querySelectorAll('.menu-item');
 
@@ -39,8 +39,6 @@ function verificarHoras() {
                 this.classList.add('active-tarde');
             });
         });
-
-        menuItens[0].classList.add('active-tarde');
 
         window.addEventListener("scroll", function () {
             let Nav = document.querySelector('#menu');
