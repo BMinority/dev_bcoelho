@@ -1,17 +1,18 @@
 @media (max-width: 780px) {
     header {
         height: 80vh;
-
-        background-size: 90%;
-        background-position-y: 50%;
     }
 
     header h2 {
-        bottom: 30vh;
+        bottom: 20vh;
 
         font-weight: 100;
 
         font-size: 1rem;
+    }
+
+    .logo {
+        background-size: 90%;
     }
 
     nav {
@@ -28,16 +29,12 @@
         gap: 0.2rem;
     }
 
-    nav a:hover {
-        color: var(--branco);
-    }
-
     nav i {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     nav p{
-        font-size: 0.6rem;
+        display: none;
     }
 
     nav ul li {
@@ -126,6 +123,10 @@
 
     .download {
         height: 8vh;
+    }
+
+    .download button {
+        font-size: 1.2rem;
     }
 
     footer {

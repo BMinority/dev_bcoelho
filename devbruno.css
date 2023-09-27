@@ -57,10 +57,6 @@ body {
 /*header*/
 
 header {
-    background-image: url(./Assets/logo.png);
-    background-size: 75%;
-    background-repeat: no-repeat;
-    background-position: 50%, 50%;
 
     width: 100%;
     height: 100vh;
@@ -68,22 +64,21 @@ header {
     position: relative;
 }
 
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-/*    background: linear-gradient(to top, var(--preto), var(--azul-profundo));*/
-    z-index: -1;
+.logo {
+    background-image: url(./Assets/logo.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+
+    background-position: 50%, 50%;
+
+    width: 100%;
+
+    height: 80vh;
 }
 
 nav {
     width: 100%;
     height: 10vh;
-
-    padding: 5px;
 
     position: fixed;
 
@@ -105,19 +100,19 @@ nav {
 nav.bg-dia {
     background-color: var(--azul);
 
-    height: 8vh;
+    height: 9vh;
 }
 
 nav.bg-tarde {
     background-color: var(--laranja-escuro);
 
-    height: 8vh;
+    height: 9vh;
 }
 
 nav.bg-noite {
     background-color: var(--cinza-escuro);
 
-    height: 8vh;
+    height: 9vh;
 }
 
 nav, ul {
@@ -151,7 +146,16 @@ nav a {
     justify-content: center;
     align-items: center;
 
+    text-align: center;
+
     gap: 0.5rem;
+
+    padding: 5px;
+}
+
+nav p {
+
+    text-align: center;
 }
 
 .menu-item.active {
@@ -270,6 +274,7 @@ header h2 {
     padding: 15px;
 
     border-radius: 15px;
+    border: var(--branco) 1px solid;
 
     display: flex;
     flex-direction: column;
@@ -559,9 +564,11 @@ header h2 {
 
     border-radius: 5px;
 
-    border: none;
+    border: var(--branco) 0.1px solid;
 
-    background-color: var(--azul-claro2);
+    background-color: var(--preto-opaco);
+
+    color: var(--branco);
 
     transition: 0.2s;
 }
@@ -569,11 +576,15 @@ header h2 {
 .download a {
     text-decoration: none;
 
-    color: var(--azul-profundo);
+    color: var(--branco);
 }
 
 .download button:hover {
     background-color: var(--amarelo);
+}
+
+.download a:hover {
+    color: var(--preto);
 }
 
 /*footer*/
