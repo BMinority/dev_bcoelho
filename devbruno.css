@@ -13,13 +13,17 @@
     --azul-claro: #522bfd;
 
     --preto: #000;
+    --preto-opaco: #0000006b;
 
     --branco: #fff;
 
     --laranja: #ff6600;
+    --laranja-escuro: #752f00;
+    --laranja-claro: #ff8432;
     --azul-claro2: #00e1ff;
     --amarelo: #ffee00;
     --cinza: #707070;
+    --cinza-escuro: #292828;
     --cinza-opaco: #7070705b;
 }
 
@@ -35,8 +39,6 @@ body {
 
     width: auto;
     height: auto;
-
-    background-color: var(--azul-escuro);
 }
 
 /*efeito de lanter para o cursor (opcional)*/
@@ -73,7 +75,7 @@ header::before {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to top, var(--preto), var(--azul-profundo));
+/*    background: linear-gradient(to top, var(--preto), var(--azul-profundo));*/
     z-index: -1;
 }
 
@@ -100,8 +102,20 @@ nav {
     transition: 0.4s;
 }
 
-nav.second-bg {
+nav.bg-dia {
     background-color: var(--azul);
+
+    height: 8vh;
+}
+
+nav.bg-tarde {
+    background-color: var(--laranja-escuro);
+
+    height: 8vh;
+}
+
+nav.bg-noite {
+    background-color: var(--cinza-escuro);
 
     height: 8vh;
 }
@@ -140,11 +154,15 @@ nav a {
     gap: 0.5rem;
 }
 
-nav a:hover {
+.menu-item.active {
     color: var(--azul-claro2);
 }
 
-.menu-item.active {
+.menu-item.active-tarde {
+    color: var(--laranja-claro);
+}
+
+.menu-item.active-noite {
     color: var(--azul-claro2);
 }
 
@@ -165,7 +183,7 @@ header h2 {
 .container-site {
     width: 100%;
 
-    background-image: linear-gradient(to bottom, var(--preto), var(--azul-escuro));
+/*    background-image: linear-gradient(to bottom, var(--preto), var(--azul-escuro));*/
 
     text-align: center;
 }
@@ -260,11 +278,10 @@ header h2 {
 
     justify-content: center;
 
-    background-color: var(--azul-claro);
-
+    background-color: var(--preto-opaco);
 }
 
-.bg-xp {
+.img-xp {
     width: 100%;
     height: 30vh;
 
@@ -395,7 +412,7 @@ header h2 {
 .projects {
     width: 100%;
 
-    padding: 15px;
+    padding: 30px 15px;
 
     gap: 4vh;
 
@@ -420,7 +437,9 @@ header h2 {
 
     padding: 8px;
 
-    background-color: var(--azul-claro);
+    background-color: var(--preto-opaco);
+
+    box-shadow: 0 5px 10px 2px #000;
 
     display: flex;
     flex-direction: column;
@@ -517,13 +536,13 @@ header h2 {
 }
 
 .contact ul li {
-    color: var(--azul-claro2);
+    color: var(--branco);
 }
 
 .contact a {
     text-decoration: none;
 
-    color: var(--azul-claro2);
+    color: var(--branco);
 }
 
 /*download*/
