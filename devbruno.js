@@ -18,8 +18,6 @@ function verificarHoras() {
             });
         });
 
-        menuItens[0].classList.add('active');
-
         window.addEventListener("scroll", function () {
             let Nav = document.querySelector('#menu');
 
@@ -59,8 +57,6 @@ function verificarHoras() {
                 this.classList.add('active-noite');
             });
         });
-
-        menuItens[0].classList.add('active-noite');
 
         window.addEventListener("scroll", function () {
             let Nav = document.querySelector('#menu');
