@@ -75,7 +75,7 @@ function verificarHoras() {
 
 verificarHoras();
 
-setInterval(verificarHora, 1);
+setInterval(verificarHoras, 1);
 
 
 //efeito lanterna do cursor
