@@ -25,7 +25,7 @@ function verificarHoras() {
         });
 
     } else if (hora >= 12 && hora < 19) {
-        corpo.style.backgroundImage = "linear-gradient(to bottom, var(--azul-claro), var(--laranja))";
+        corpo.style.backgroundColor = "var(--azul-claro)";
 
         const menuItens = document.querySelectorAll('.menu-item');
 
