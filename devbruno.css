@@ -52,17 +52,57 @@ body {
     width: auto;
     height: auto;
 
-    background-color: var(--cinza);
+    background-color: var(--preto);
 }
+
+/*-------------------------*/
+.header-site {
+    background-image: url(./Assets/sapacebg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.satelite {
+    position: absolute;
+    top: 10%;
+
+    width: 100%;
+
+    padding: 20px;
+}
+
+@keyframes moveSatellite {
+    0%, 100% {
+      transform: translateX(-10%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+}
+
+.satelite img {
+    width: 30vh;
+    animation: moveSatellite 10s infinite alternate;
+
+    position: absolute;
+    right: 0;
+}
+
 
 /*header*/
 
 header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     width: 100%;
     height: 100vh;
 
     position: relative;
+
+    background-image: linear-gradient(to bottom, var(--preto-opaco)80%, var(--preto));
 }
 
 .logo {
@@ -155,7 +195,7 @@ nav p {
 }
 
 header h2 {
-    width: 100%;
+    width: 70%;
 
     position: absolute;
     bottom: 20vh;
@@ -164,14 +204,16 @@ header h2 {
     font-weight: 200;
 
     color: var(--branco);
+    background-color: #000000bb;
+
+    border-radius: 15px;
+    padding: 3px;
 }
 
 /*container do site*/
 
 .container-site {
     width: 100%;
-
-    /*    background-image: linear-gradient(to bottom, var(--preto), var(--azul-escuro));*/
 
     text-align: center;
 }
@@ -184,11 +226,19 @@ header h2 {
 
 /*sessão sobre*/
 
+.about-site {
+    background-image: url(./Assets/galaxy-3608029.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .about {
     width: 100%;
     height: 100vh;
 
     color: var(--branco);
+
+    background-image: linear-gradient(to bottom, var(--preto), var(--preto-opaco), var(--preto));
 
     padding: 15px;
 
@@ -208,7 +258,7 @@ header h2 {
     width: 50rem;
 
     gap: 2vh;
-    
+
     padding: 20px;
 
     border-radius: 20px;
@@ -226,11 +276,19 @@ header h2 {
 
 /*sessão experiência*/
 
+.xp-site {
+    background-image: url(./Assets/stars-1837306.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .experience {
     width: 100%;
     height: 100vh;
 
     color: var(--branco);
+
+    background-image: linear-gradient(to bottom, var(--preto), var(--preto-opaco), var(--preto));
 
     padding: 15px;
 
@@ -264,7 +322,9 @@ header h2 {
     padding: 15px;
 
     border-radius: 15px;
-    box-shadow: 2px 2px 4px #000, inset 0 0 10px #000;
+
+    background-color: #2d2e5ece;
+    box-shadow: 2px 2px 4px #000;
 
     display: flex;
     flex-direction: column;
@@ -400,6 +460,13 @@ header h2 {
     margin-right: 1rem;
 }
 
+/*secao final*/
+.secao-final {
+    background-image: url(./Assets/galaxy-3608029.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /*sessão projetos*/
 .projects {
     width: 100%;
@@ -409,6 +476,8 @@ header h2 {
     flex-wrap: wrap;
 
     justify-content: space-around;
+
+    background-image: linear-gradient(to bottom, var(--preto), #0000000c);
 }
 
 .projects section {
@@ -450,7 +519,7 @@ header h2 {
 
     border-radius: 15px;
 
-    background-color: var(--preto-opaco);
+    background-color: #2d2e5ece;
     box-shadow: 2px 2px 4px #000;
 
     display: flex;

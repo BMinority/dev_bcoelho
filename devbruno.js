@@ -1,6 +1,6 @@
 // Este script adiciona uma classe 'scroll' ao nav quando a página é rolada
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const nav = document.getElementById('menu');
     if (window.scrollY > 0) {
         nav.classList.add('scroll');
@@ -13,9 +13,9 @@ window.addEventListener('scroll', function() {
 
 const menuItems = document.querySelectorAll('.menu-item');
 
-menuItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-        menuItems.forEach(function(item) {
+menuItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+        menuItems.forEach(function (item) {
             item.classList.remove('ativo');
         });
         this.classList.add('ativo');
