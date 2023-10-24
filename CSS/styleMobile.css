@@ -55,6 +55,12 @@
     .about {
         width: 100%;
         height: 85vh;
+
+        margin-bottom: 1rem;
+    }
+
+    #box-about {
+        width: 98%;
     }
 
     #box-about p {

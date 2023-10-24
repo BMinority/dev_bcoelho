@@ -1,89 +1,23 @@
-//modificar elementos do body de acordo com o horário
-function verificarHoras() {
-    let agora = new Date();
-    let hora = agora.getHours();
-    const corpo = document.getElementById("corpo");
+// Este script adiciona uma classe 'scroll' ao nav quando a página é rolada
 
-    if (hora < 12) {
-        corpo.style.backgroundImage = "linear-gradient(to bottom, var(--azul-profundo), var(--preto)20%, var(--azul-escuro))";
-
-        const menuItens = document.querySelectorAll('.menu-item');
-
-        menuItens.forEach(item => {
-            item.addEventListener('click', function () {
-                menuItens.forEach(item => {
-                    item.classList.remove('active');
-                });
-                this.classList.add('active');
-            });
-        });
-
-        window.addEventListener("scroll", function () {
-            let Nav = document.querySelector('#menu');
-
-            Nav.classList.toggle('bg-dia', window.scrollY > 100);
-        });
-
-    } else if (hora >= 12 && hora < 19) {
-        corpo.style.backgroundColor = "var(--azul-claro)";
-
-        const menuItens = document.querySelectorAll('.menu-item');
-
-        menuItens.forEach(item => {
-            item.addEventListener('click', function () {
-                menuItens.forEach(item => {
-                    item.classList.remove('active-tarde');
-                });
-                this.classList.add('active-tarde');
-            });
-        });
-
-        window.addEventListener("scroll", function () {
-            let Nav = document.querySelector('#menu');
-
-            Nav.classList.toggle('bg-tarde', window.scrollY > 100);
-        });
-
-    } else if (hora >= 19) {
-        corpo.style.backgroundImage = "linear-gradient(to bottom, var(--cinza), var(--preto)20%, var(--cinza))";
-
-        const menuItens = document.querySelectorAll('.menu-item');
-
-        menuItens.forEach(item => {
-            item.addEventListener('click', function () {
-                menuItens.forEach(item => {
-                    item.classList.remove('active-noite');
-                });
-                this.classList.add('active-noite');
-            });
-        });
-
-        window.addEventListener("scroll", function () {
-            let Nav = document.querySelector('#menu');
-
-            Nav.classList.toggle('bg-noite', window.scrollY > 100);
-        });
-
+window.addEventListener('scroll', function() {
+    const nav = document.getElementById('menu');
+    if (window.scrollY > 0) {
+        nav.classList.add('scroll');
+    } else {
+        nav.classList.remove('scroll');
     }
-}
+});
 
-verificarHoras();
+// Este script adiciona a classe 'ativo' ao item do menu clicado e remove dos outros
 
-setInterval(verificarHoras, 1);
+const menuItems = document.querySelectorAll('.menu-item');
 
-
-//efeito lanterna do cursor
-/*
-document.addEventListener('DOMContentLoaded', function() {
-    const lanterna = document.createElement('div');
-    lanterna.classList.add('lanterna');
-    document.body.appendChild(lanterna);
-
-    document.addEventListener('mousemove', function(e) {
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
-        lanterna.style.left = `${mouseX}px`;
-        lanterna.style.top = `${mouseY}px`;
+menuItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+        menuItems.forEach(function(item) {
+            item.classList.remove('ativo');
+        });
+        this.classList.add('ativo');
     });
 });
-*/
