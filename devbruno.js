@@ -1,3 +1,9 @@
+window.addEventListener('load', function() {
+    var loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.display = 'none';
+});
+
+
 // Este script adiciona uma classe 'scroll' ao nav quando a página é rolada
 
 window.addEventListener('scroll', function () {
@@ -9,8 +15,8 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Este script adiciona a classe 'ativo' ao item do menu clicado e remove dos outros
 
+// Este script adiciona a classe 'ativo' ao item do menu clicado e remove dos outros
 const menuItems = document.querySelectorAll('.menu-item');
 
 menuItems.forEach(function (item) {
