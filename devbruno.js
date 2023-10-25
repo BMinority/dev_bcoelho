@@ -3,6 +3,10 @@ window.addEventListener('load', function() {
     loadingScreen.style.display = 'none';
 });
 
+//---------------------------------------------------------
+
+window.alert("Olá! no momento eu estou sem acesso a um telefone; por tanto, sem acesso ao whatsapp. Se desejar entrar em contato comigo, poderá faze-lo no chat do facebook: Bruno Coelho, Instagram: @dev_bcoelho ou linkedin: dev-bcoelho.");
+
 
 // Este script adiciona uma classe 'scroll' ao nav quando a página é rolada
 
