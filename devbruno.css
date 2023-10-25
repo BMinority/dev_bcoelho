@@ -352,7 +352,7 @@ header h2 {
 
     border-radius: 15px;
 
-    background-color: #2d2e5ece;
+    background-image: linear-gradient(to right, #000, #646464);
     box-shadow: 2px 2px 4px #000;
 
     display: flex;
@@ -548,7 +548,7 @@ header h2 {
 
     border-radius: 15px;
 
-    background-color: #2d2e5ece;
+    background-image: linear-gradient(to right, #000, #646464);
     box-shadow: 2px 2px 4px #000;
 
     display: flex;
@@ -633,7 +633,7 @@ header h2 {
     flex-direction: column;
     gap: 4vh;
 
-    background-color: var(--cinza-escuro);
+    background-image: linear-gradient(to right, #000, #646464);
 
     box-shadow: 2px 2px 4px #000;
 }
