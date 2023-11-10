@@ -11,7 +11,6 @@ window.alert("Olá! no momento eu estou sem acesso a um telefone; por tanto, sem
 
 
 // Este script adiciona uma classe 'scroll' ao nav quando a página é rolada
-
 window.addEventListener('scroll', function () {
     const nav = document.getElementById('menu');
     if (window.scrollY > 0) {
